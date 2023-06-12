@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - plane
+  - star
+  - coin
+  - aidKit
+  - boat
   layers:
   - Default
   - TransparentFX
