@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class itemPickUpManagement : MonoBehaviour
 {
     [SerializeField] GameObject pickGuide;
+    public Transform itemContent;
+    public GameObject inventoryItem;
     private bool inventoryControl;
     private GameObject collectibleObject;
     private int starCount;
     private int aidCount;
     private int coinCount;
     private int boatCount;
+    public item Item;
     void Start()
     {
         collectibleObject = gameObject;
@@ -96,8 +101,19 @@ public class itemPickUpManagement : MonoBehaviour
                     }
                     break;
             }
+            singeltonObject.Instance.Item.Add(Item);
+            listItems();
             Destroy(collectibleObject);
             pickGuide.SetActive(false);
         }
+    }
+
+    public void listItems()
+    {
+        GameObject obj = Instantiate(inventoryItem);
+        obj.transform.SetParent(itemContent.transform);
+        var itemIcon = obj.transform.GetChild(0);
+        itemIcon.GetComponent<Image>().sprite = Item.itemIcon;
+        Debug.Log(singeltonObject.Instance.Item.LastIndexOf(Item));
     }
 }
