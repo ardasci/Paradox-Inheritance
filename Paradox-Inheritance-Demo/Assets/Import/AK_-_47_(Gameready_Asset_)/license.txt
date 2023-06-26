@@ -1,0 +1,11 @@
+Model Information:
+* title:	AK - 47 (Gameready Asset )
+* source:	https://sketchfab.com/3d-models/ak-47-gameready-asset-12a6aba4f4db45a0b656925feb9d2ce4
+* author:	Sambit_Raut (https://sketchfab.com/Sambit_Raut)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "AK - 47 (Gameready Asset )" (https://sketchfab.com/3d-models/ak-47-gameready-asset-12a6aba4f4db45a0b656925feb9d2ce4) by Sambit_Raut (https://sketchfab.com/Sambit_Raut) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

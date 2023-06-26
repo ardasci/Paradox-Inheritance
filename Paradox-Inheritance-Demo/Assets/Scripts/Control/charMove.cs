@@ -82,7 +82,7 @@ public class charMove : MonoBehaviour
             charAnim.SetBool("jumpSprint", false);
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) && charAnim.GetFloat("movement") == 1)
+        if (Input.GetKey(KeyCode.LeftShift) && !charAnim.GetBool("weaponAimIdle") && charAnim.GetFloat("movement") == 1)
         {
             speed = 3;
             charAnim.SetBool("sprint", true);
