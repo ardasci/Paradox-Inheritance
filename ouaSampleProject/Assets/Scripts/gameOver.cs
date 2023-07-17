@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,7 +9,7 @@ public class gameOver : MonoBehaviour
 {
     public GameObject panel;
     public Text coinCount;
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -16,6 +17,7 @@ public class gameOver : MonoBehaviour
         {
             coinCount.text = PlayerPrefs.GetInt("coin").ToString();
             panel.SetActive(true);
+            
         }
     }
 

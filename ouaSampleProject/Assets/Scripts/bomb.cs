@@ -5,6 +5,7 @@ using UnityEngine;
 public class bomb : MonoBehaviour
 {
     private GameObject plane;
+    [SerializeField] private AudioSource deathSound;
     private void Start()
     {
         plane = GameObject.FindGameObjectWithTag("plane");
@@ -17,7 +18,9 @@ public class bomb : MonoBehaviour
         }
         else if (collision.tag == "plane")
         {
+            deathSound.Play();
             Destroy(plane.gameObject);
+            
         }
     }
 }

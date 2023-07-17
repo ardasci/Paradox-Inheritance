@@ -10,6 +10,10 @@ public class planeCont : MonoBehaviour
     private Vector2 planeDirection;
     public Text score;
     private int coinScore;
+
+    [SerializeField] private AudioSource coinCollection;
+    [SerializeField] private AudioSource deathSound;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,6 +35,7 @@ public class planeCont : MonoBehaviour
     {
         if (collision.gameObject.tag == "coin")
         {
+            coinCollection.Play();
             coinScore++;
             score.text = "=" + " " + coinScore.ToString();
             Destroy(collision.gameObject);
